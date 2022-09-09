@@ -1,0 +1,59 @@
+@import 'mixins';
+@import 'variables';
+
+// SEARCH BAR COMPONENT
+.searchBar {
+  background: $color-yellow;
+}
+.container {
+  @include flex(space-between, center);
+  padding: 0;
+}
+
+// SEARCH LOGO COMPONENT
+.linkLogo {
+  display: inline-block;
+}
+.logo {
+  width: 49px;
+}
+
+// SEARCH FIELD COMPONENT
+$searchHeight: 34px;
+.searchForm {
+  width: 100%;
+  margin: 10px 0;
+}
+.fieldContainer {
+  border: none;
+  padding: 0 0 0 20px;
+  @include flex(space-between, center);
+}
+.searchField {
+  @include size(100%, $searchHeight);
+  border: none;
+  padding: 0 10px;
+  font-size: 18px;
+  border-radius: $corner-radius 0 0 $corner-radius;
+}
+.searchButton {
+  border: none;
+  font-size: 0;
+  position: relative;
+  @include size($searchHeight);
+  cursor: pointer;
+  transition: all 0.5s;
+  background-color: $color-gray-e;
+  border-radius: 0 $corner-radius $corner-radius 0;
+
+  &:hover {
+    background-color: darken($color-gray-e, 10%);
+  }
+
+  $sizeIcon: $searchHeight / 3.5;
+  background: {
+    image: url('/assets/img/ic_Search.png');
+    repeat: no-repeat;
+    position: center;
+  }
+}

@@ -1,0 +1,93 @@
+@import 'mixins';
+@import 'variables';
+
+.page {
+  background: $color-gray-e;
+}
+.container {
+  padding: $space;
+  background: #fff;
+  border-radius: $corner-radius;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// IMAGE DETAIL COMPONENT
+.imageProduct {
+  width: 65%;
+  padding-right: 10px;
+  text-align: center;
+  img {
+    width: auto;
+    height: 600px;
+    max-width: 600px;
+  }
+}
+
+// SALE INFO COMPONENT
+.saleInfo {
+  width: 35%;
+  padding: {
+    top: $space * 2;
+    right: $space * 2;
+  }
+  small {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 110%;
+    margin-top: $space;
+  }
+  button {
+    @include size(100%, 50px);
+    width: 100%;
+    background-color: $color-blue;
+    border: none;
+    border-radius: $corner-radius;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 300;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($color-blue, 10%);
+    }
+  }
+}
+
+// PRICE FORMAT COMPONENT
+.price {
+  font-size: 46px;
+  margin: ($space * 2) 0;
+  letter-spacing: -1px;
+
+  span {
+    font-size: inherit;
+    padding-right: 20px;
+  }
+  sup {
+    font-size: 24px;
+  }
+}
+
+// DESCRIPTION COMPONENT
+.description {
+  letter-spacing: -1px;
+  width: 65%;
+  padding: $space * 2;
+
+  h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+    padding-right: 20px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 140%;
+    color: $color-gray-9;
+    margin: ($space * 2) 0;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../mixins';
+@import '../variables';
+
+.container {
+  padding: $space 0;
+}
+.list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+.listItem {
+  color: $color-gray-9;
+  font-size: 14px;
+
+  &::after {
+    content: '\203A';
+    padding: 0 5px;
+    display: inline-block;
+  }
+
+  &:last-child {
+    font-weight: bold;
+    &::after {
+      content: '';
+    }
+    a {
+      font-weight: bold;
+      display: inline-block;
+    }
+  }
+}

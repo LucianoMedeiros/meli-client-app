@@ -1,0 +1,41 @@
+@mixin flex($horizontal, $vertical, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+
+  @if $direction == 'row' {
+    justify-content: $horizontal;
+    align-items: $vertical;
+  } @else if $direction == 'column' {
+    justify-content: $vertical;
+    align-items: $horizontal;
+  }
+}
+
+@mixin size($w, $h: $w) {
+  width: $w;
+  height: $h;
+}
+
+@mixin absoluteRT($right, $top) {
+  position: absolute;
+  top: $left;
+  right: $right;
+}
+
+@mixin absoluteLT($left, $top) {
+  position: absolute;
+  left: $left;
+  top: $top;
+}
+
+@mixin absoluteRB($right, $bottom) {
+  position: absolute;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin absoluteLB($left, $bottom) {
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+}

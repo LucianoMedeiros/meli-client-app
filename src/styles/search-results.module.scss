@@ -1,0 +1,71 @@
+@import 'mixins';
+@import 'variables';
+
+.page {
+  background: $color-gray-e;
+}
+.container {
+  padding: 0;
+}
+.resultList {
+  background-color: #fff;
+  margin: 0;
+  padding: $space;
+  list-style-type: none;
+  border-radius: $corner-radius;
+  min-height: 800px;
+}
+.resultItem {
+  @include flex(space-between, stretch);
+  border-bottom: 1px solid $color-gray-e;
+  padding: $space 0;
+  cursor: pointer;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border: none;
+    padding-bottom: 0;
+  }
+}
+.descriptionItem {
+  width: 100%;
+  p {
+    font-size: 18px;
+    padding: $space 0;
+  }
+}
+.priceItem {
+  margin: $space 0;
+  @include flex(left, center);
+  strong {
+    font-size: 24px;
+    font-weight: 400;
+    padding-right: $space;
+    span {
+      font-size: inherit;
+      padding-right: 5px;
+    }
+  }
+  div {
+    @include size(18px);
+    @include flex(center, center);
+    img {
+      width: 18px;
+    }
+  }
+}
+.imageItem {
+  padding-right: $space;
+  img {
+    border-radius: $corner-radius;
+    width: 180px;
+    height: 180px;
+  }
+}
+.cityItem {
+  width: 20%;
+  padding: $space 0;
+}

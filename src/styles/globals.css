@@ -1,0 +1,41 @@
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+* {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #323232;
+}
+
+strong,
+b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+main {
+  min-height: 100vh;
+}
+section {
+  /* background-color: maroon; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container {
+  width: 991px;
+  padding: 10px 0;
+}
